@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://broker.me.org/" xmlns:ns1="http://xml.netbeans.org/schema/CompanyInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://broker.me.org/">
+
+<xs:import namespace="http://xml.netbeans.org/schema/CompanyInfo" schemaLocation="http://localhost:8080/BrokerWS/BrokerWS?xsd=1"/>
+
+<xs:element name="buyShares" type="tns:buyShares"/>
+
+<xs:element name="buySharesResponse" type="tns:buySharesResponse"/>
+
+<xs:element name="displayAll" type="tns:displayAll"/>
+
+<xs:element name="displayAllResponse" type="tns:displayAllResponse"/>
+
+<xs:element name="getServerInfo" type="tns:getServerInfo"/>
+
+<xs:element name="getServerInfoResponse" type="tns:getServerInfoResponse"/>
+
+<xs:element name="spAPI" type="tns:spAPI"/>
+
+<xs:element name="spAPIResponse" type="tns:spAPIResponse"/>
+
+<xs:element name="updatedPrice" type="tns:updatedPrice"/>
+
+<xs:element name="updatedPriceResponse" type="tns:updatedPriceResponse"/>
+
+<xs:complexType name="spAPI">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="spAPIResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerInfo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getServerInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatedPrice">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updatedPriceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="displayAllResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:company" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buyShares">
+<xs:sequence>
+<xs:element name="CompanySymbol" type="xs:string" minOccurs="0"/>
+<xs:element name="shareAmount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buySharesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

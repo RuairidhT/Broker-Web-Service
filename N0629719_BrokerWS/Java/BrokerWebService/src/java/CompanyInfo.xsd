@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://xml.netbeans.org/schema/CompanyInfo"
+           xmlns:tns="http://xml.netbeans.org/schema/CompanyInfo"
+           elementFormDefault="qualified">
+    
+    <xsd:complexType name="share_price" >
+        <xsd:sequence>
+            <xsd:element name="currency" type="xsd:string"/>
+            <xsd:element name="value" type="xsd:float"/>
+            <xsd:element name="lastUpdate" type="xsd:date"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="company" >
+        <xsd:sequence>
+            <xsd:element name="share_availability" type="xsd:int"/>
+            <xsd:element name="share_price" type="tns:share_price"/>
+            <xsd:element name="company_name" type="xsd:string"/>
+            <xsd:element name="company_symbol" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="shareList">
+        <xsd:complexType>
+            <xsd:sequence >
+                <xsd:element name="shares_collection" type="tns:company" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

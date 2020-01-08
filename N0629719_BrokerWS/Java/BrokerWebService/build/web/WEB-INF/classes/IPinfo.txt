@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<status><![CDATA[success]]></status>
+	<country><![CDATA[United Kingdom]]></country>
+	<countryCode><![CDATA[GB]]></countryCode>
+	<region><![CDATA[ENG]]></region>
+	<regionName><![CDATA[England]]></regionName>
+	<city><![CDATA[Nottingham]]></city>
+	<zip><![CDATA[NG7]]></zip>
+	<lat><![CDATA[52.9536]]></lat>
+	<lon><![CDATA[-1.1505]]></lon>
+	<timezone><![CDATA[Europe/London]]></timezone>
+	<isp><![CDATA[The Nottingham Trent University]]></isp>
+	<org><![CDATA[Nottingham Trent University]]></org>
+	<as><![CDATA[AS786 Jisc Services Limited]]></as>
+	<query><![CDATA[152.71.207.142]]></query>
+</query>
